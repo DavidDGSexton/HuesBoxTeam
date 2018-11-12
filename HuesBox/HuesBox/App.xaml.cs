@@ -11,7 +11,8 @@ namespace HuesBox
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new SelectColorPage();
+           
         }
 
         protected override void OnStart()

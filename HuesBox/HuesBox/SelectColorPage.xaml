@@ -4,9 +4,41 @@
              x:Class="HuesBox.SelectColorPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            
+            <!--Stack layout contains color preview box and label-->
+            <StackLayout Padding="20" Orientation="Horizontal">
+                <BoxView x:Name="ColorPreview" Color="White" HorizontalOptions="FillAndExpand" />
+                <Entry x:Name="ColorEntry" FontSize="30" Text="#FFFFFF" VerticalOptions="Center" HorizontalOptions="Center" TextChanged="ColorEntry_TextChanged" />
+            </StackLayout>
+            
+            <!--Stack layout contains Red Slider-->
+            <StackLayout Padding="20,0" Orientation="Horizontal">
+                <Label WidthRequest="65" Text="Red" FontSize="20"/>
+                <Slider Maximum="255"
+                    ValueChanged="Slider_ValueRed"
+                    HorizontalOptions="FillAndExpand"
+                />
+
+            </StackLayout>
+            
+            <!--Stack layout contains Green Slider-->
+            <StackLayout Padding="20,0" Orientation="Horizontal">
+                <Label WidthRequest="65" Text="Green" FontSize="20"/>
+                <Slider Maximum="255"
+                    ValueChanged="Slider_ValueGreen"
+                    HorizontalOptions="FillAndExpand"
+                />
+            </StackLayout>
+
+            <!--Stack layout contains Blue Slider-->
+            <StackLayout Padding="20,0" Orientation="Horizontal">
+                <Label WidthRequest="65" Text="Blue" FontSize="20"/>
+                <Slider Maximum="255"
+                    ValueChanged="Slider_ValueBlue"
+                    HorizontalOptions="FillAndExpand"
+                />
+            </StackLayout>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
