@@ -3,15 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HuesBox.SelectColorPage">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Spacing="30" VerticalOptions="End">
             
             <!--Stack layout contains color preview box and label-->
-            <StackLayout Padding="20" Orientation="Horizontal">
-                <BoxView x:Name="ColorPreview" Color="White" HorizontalOptions="FillAndExpand" />
-                <Entry x:Name="ColorEntry" FontSize="30" Text="#FFFFFF" VerticalOptions="Center" HorizontalOptions="Center" TextChanged="ColorEntry_TextChanged" />
+            <StackLayout Padding="-20,0,-20,0" Orientation="Vertical">
+                <BoxView x:Name="ColorPreview"  HorizontalOptions="FillAndExpand" HeightRequest="150"  Color="White" />
+                <Entry x:Name="ColorEntry" FontSize="60" Text="#FFFFFF" WidthRequest="275" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="Center" TextChanged="ColorEntry_TextChanged" />
             </StackLayout>
             
             <!--Stack layout contains Red Slider-->
+            
             <StackLayout Padding="20,0" Orientation="Horizontal">
                 <Label WidthRequest="65" Text="Red" FontSize="20"/>
                 <Slider Maximum="255"
@@ -31,7 +32,7 @@
             </StackLayout>
 
             <!--Stack layout contains Blue Slider-->
-            <StackLayout Padding="20,0" Orientation="Horizontal">
+            <StackLayout Padding="20,0,20,30" Orientation="Horizontal">
                 <Label WidthRequest="65" Text="Blue" FontSize="20"/>
                 <Slider Maximum="255"
                     ValueChanged="Slider_ValueBlue"
