@@ -94,5 +94,11 @@ namespace HuesBox
                 }
             }
         }
+
+        private void SubmitButton_Tapped(object sender, EventArgs e)
+        {
+            String ColorUserInput = ColorEntry.Text;
+            Navigation.PushAsync(new ResultsPage(ColorUserInput));
+        }
     }
 }

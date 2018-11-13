@@ -39,6 +39,12 @@
                 />
             </StackLayout>
 
+            <Image Source=""
+                   x:Name="SubmitButton">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="SubmitButton_Tapped"/>
+                </Image.GestureRecognizers>
+            </Image>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

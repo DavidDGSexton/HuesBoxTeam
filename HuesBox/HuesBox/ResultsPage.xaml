@@ -4,9 +4,27 @@
              x:Class="HuesBox.ResultsPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <StackLayout Orientation="Horizontal">
+                <BoxView BackgroundColor="{Binding UserInput}"/>
+                <Label Text="Hex code for color selected" FontSize="10"/>
+            </StackLayout>
+            <Label Text= "Your Complimentary Colors:"
+                   HorizontalOptions="CenterAndExpand"/>
+            <ListView x:Name="ResultsListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <BoxView WidthRequest="50"
+                                     HeightRequest="50"
+                                     BackgroundColor="Blue"/>
+                                <Label Text="Color1"
+                                       FontSize="20"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
