@@ -1,11 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:HuesBox"
-             x:Class="HuesBox.MainPage">
+             x:Class="HuesBox.MainPage"
+             Title="Home">
 
     <StackLayout>
         <!-- Place new controls here -->
+        
+        <Image Source="huesBoxLogo.png"
+               Margin="20" />
         <Label Text="Welcome to Xamarin.Formss!" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />

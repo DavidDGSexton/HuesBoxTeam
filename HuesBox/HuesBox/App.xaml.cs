@@ -11,7 +11,7 @@ namespace HuesBox
         {
             InitializeComponent();
 
-            MainPage = new SelectColorPage();
+            MainPage = new MainPage();
            
         }
 
