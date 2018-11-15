@@ -15,10 +15,11 @@
             <!--Stack layout contains Red Slider-->
             
             <StackLayout Padding="20,0" Orientation="Horizontal">
-                <Label WidthRequest="65" Text="Red" FontSize="20"/>
+                <Label WidthRequest="65" Text="Red" FontSize="20" />
                 <Slider Maximum="255"
-                    ValueChanged="Slider_ValueRed"
-                    HorizontalOptions="FillAndExpand"
+                        ValueChanged="Slider_ValueRed"
+                        HorizontalOptions="FillAndExpand"
+                        ThumbColor="Red"
                 />
 
             </StackLayout>
@@ -27,8 +28,9 @@
             <StackLayout Padding="20,0" Orientation="Horizontal">
                 <Label WidthRequest="65" Text="Green" FontSize="20"/>
                 <Slider Maximum="255"
-                    ValueChanged="Slider_ValueGreen"
-                    HorizontalOptions="FillAndExpand"
+                        ValueChanged="Slider_ValueGreen"
+                        HorizontalOptions="FillAndExpand"
+                        ThumbColor="Green"
                 />
             </StackLayout>
 
@@ -36,8 +38,11 @@
             <StackLayout Padding="20,0,20,30" Orientation="Horizontal">
                 <Label WidthRequest="65" Text="Blue" FontSize="20"/>
                 <Slider Maximum="255"
-                    ValueChanged="Slider_ValueBlue"
-                    HorizontalOptions="FillAndExpand"
+                        ValueChanged="Slider_ValueBlue"
+                        HorizontalOptions="FillAndExpand"
+                        ThumbColor="Blue"
+                        MaximumTrackColor="DarkGray"
+                        MinimumTrackColor="Blue"
                 />
             </StackLayout>
 
