@@ -4,15 +4,54 @@
              xmlns:local="clr-namespace:HuesBox"
              x:Class="HuesBox.MainPage"
              Title="Home">
-
+             
+ <ScrollView>
     <StackLayout>
         <!-- Place new controls here -->
-        
         <Image Source="huesBoxLogo.png"
                Margin="20" />
-        <Label Text="Welcome to Xamarin.Formss!" 
+            
+            
+            <StackLayout Orientation="Horizontal"
+                         Padding="0,10,0,60">
+                
+                
+        <Image Source="paintBrushIcon.png"
+               WidthRequest="75"
+               HeightRequest="75"
+               Margin="50, 0, 100, 0"
+               HorizontalOptions="Center"
+               />
+        <Image Source="selectColorButton.png"
+               WidthRequest="100"
+               HeightRequest="100"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+                
+                
+             </StackLayout>
+            
+            
+            <StackLayout Orientation="Horizontal">
+        <Image Source="envelopeIcon.png"
+               WidthRequest="75"
+               HeightRequest="75"
+               Margin="50, 0, 100, 0"
+               HorizontalOptions="Center"/>
+                
+                
+       <Image Source="contactUsButton.png"
+               WidthRequest="100"
+               HeightRequest="100"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+            
+        <Label Text="Add space" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
+            
+            
     </StackLayout>
-
+ </ScrollView>
 </ContentPage>

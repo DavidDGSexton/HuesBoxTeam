@@ -92,6 +92,8 @@
     <AndroidResource Include="Resources\drawable\huesBoxLogo.png" />
     <AndroidResource Include="Resources\drawable\complimentaryButton.png" />
     <AndroidResource Include="Resources\drawable\submitButton.png" />
+    <AndroidResource Include="Resources\drawable\envelopeContactUsButton.png" />
+    <AndroidResource Include="Resources\drawable\paintBrushSelectColorButton.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />
