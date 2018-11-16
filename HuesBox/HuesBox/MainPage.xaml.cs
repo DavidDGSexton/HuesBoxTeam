@@ -12,6 +12,34 @@ namespace HuesBox
         public MainPage()
         {
             InitializeComponent();
+
+
+        }
+
+
+        private void paintBrushIconGestureRecognizer_OnTapped(object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new SelectColorPage());
+        }
+
+
+        private void selectColorButtonGestureRecognizer_OnTapped(object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new SelectColorPage());
+        }
+
+
+        private void envelopeIconGestureRecognizer_OnTapped(object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new ContentPage());
+        }
+
+
+        private void contactUsButtonGestureRecognizer_OnTapped(object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new ContentPage());
         }
     }
+
+
 }
