@@ -4,6 +4,7 @@
              x:Class="HuesBox.SelectColorPage"
              Title="Select Color">
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout Spacing="30" VerticalOptions="End">
             
             <!--Stack layout contains color preview box and label-->
@@ -46,12 +47,17 @@
                 />
             </StackLayout>
 
-            <Image Source=""
-                   x:Name="SubmitButton">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="SubmitButton_Tapped"/>
-                </Image.GestureRecognizers>
-            </Image>
+            <StackLayout>
+                <Image Source="submitButton.png"
+                   x:Name="SubmitButton"
+                       HeightRequest="50"
+                       WidthRequest="50">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="SubmitButton_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
         </StackLayout>
+      </ScrollView>
     </ContentPage.Content>
 </ContentPage>

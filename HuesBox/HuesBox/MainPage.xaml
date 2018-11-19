@@ -4,15 +4,73 @@
              xmlns:local="clr-namespace:HuesBox"
              x:Class="HuesBox.MainPage"
              Title="Home">
-
+             
+ <ScrollView>
     <StackLayout>
         <!-- Place new controls here -->
-        
         <Image Source="huesBoxLogo.png"
                Margin="20" />
-        <Label Text="Welcome to Xamarin.Formss!" 
+            
+            
+            <StackLayout Orientation="Horizontal"
+                         Padding="0,10,0,60">
+                
+                
+        <Image Source="paintBrushIcon.png"
+               WidthRequest="65"
+               HeightRequest="65"
+               Margin="30, 0, 30, 10"
+               HorizontalOptions="Center"
+               x:Name="paintBrushIcon">
+                <Image.GestureRecognizers>
+                   <TapGestureRecognizer Tapped="paintBrushIconGestureRecognizer_OnTapped"/>
+                </Image.GestureRecognizers>
+       </Image>
+                
+                
+        <Image Source="selectColorButton.png"
+               WidthRequest="90"
+               HeightRequest="90"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               x:Name="selectColorButton">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="selectColorButtonGestureRecognizer_OnTapped"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+       </Image>
+             </StackLayout>
+            
+            
+            <StackLayout Orientation="Horizontal">
+        <Image Source="envelopeIcon.png"
+               WidthRequest="65"
+               HeightRequest="65"
+               Margin="30, 0, 30, 10"
+               HorizontalOptions="Center"
+               x:Name="envelopeIcon">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="envelopeIconGestureRecognizer_OnTapped"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+       </Image>
+                
+                
+       <Image Source="contactUsButton.png"
+               WidthRequest="90"
+               HeightRequest="90"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               x:Name="contactUsButton">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="contactUsButtonGestureRecognizer_OnTapped"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+      </Image>
+            </StackLayout>
+            
+        <Label Text="Ad space" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
+            
+            
     </StackLayout>
-
+ </ScrollView>
 </ContentPage>

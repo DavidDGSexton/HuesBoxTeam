@@ -6,8 +6,8 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal">
-                <BoxView BackgroundColor="{Binding UserInput}"/>
-                <Label Text="Hex code for color selected" FontSize="10"/>
+                <BoxView BackgroundColor="{Binding UserInput}" HeightRequest="100" x:Name="UserInputBoxView" />
+                <Label Text="Hex code for color selected" FontSize="50"/>
             </StackLayout>
             <Label Text= "Your Complimentary Colors:"
                    HorizontalOptions="CenterAndExpand"/>
@@ -17,8 +17,7 @@
                         <ViewCell>
                             <StackLayout>
                                 <BoxView WidthRequest="50"
-                                     HeightRequest="50"
-                                     BackgroundColor="Blue"/>
+                                     HeightRequest="50"/>
                                 <Label Text="Color1"
                                        FontSize="20"/>
                             </StackLayout>
