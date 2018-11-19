@@ -21,6 +21,8 @@
                         ValueChanged="Slider_ValueRed"
                         HorizontalOptions="FillAndExpand"
                         ThumbColor="Red"
+                        MaximumTrackColor="DarkGray"
+                        MinimumTrackColor="Red"
                 />
 
             </StackLayout>
@@ -32,11 +34,14 @@
                         ValueChanged="Slider_ValueGreen"
                         HorizontalOptions="FillAndExpand"
                         ThumbColor="Green"
+                        MaximumTrackColor="DarkGray"
+                        MinimumTrackColor="Green"
+                        
                 />
             </StackLayout>
 
             <!--Stack layout contains Blue Slider-->
-            <StackLayout Padding="20,0,20,30" Orientation="Horizontal">
+            <StackLayout Padding="20,0,20,0" Orientation="Horizontal">
                 <Label WidthRequest="65" Text="Blue" FontSize="20"/>
                 <Slider Maximum="255"
                         ValueChanged="Slider_ValueBlue"
@@ -47,15 +52,27 @@
                 />
             </StackLayout>
 
-            <StackLayout>
+            <StackLayout Spacing="-10" Margin="30,0,0,20" Orientation="Horizontal">
                 <Image Source="submitButton.png"
                    x:Name="SubmitButton"
                        HeightRequest="50"
-                       WidthRequest="50">
+                       WidthRequest="50"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="Center"
+                       >
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="SubmitButton_Tapped"/>
                     </Image.GestureRecognizers>
                 </Image>
+                    <Button x:Name="CameraPageButton"
+                        Text="Camera PlaceHolder"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="Center"
+                        Clicked="CameraPageButton_Clicked"
+                        >
+                        
+                    </Button>
+                
             </StackLayout>
         </StackLayout>
       </ScrollView>

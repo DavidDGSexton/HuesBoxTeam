@@ -99,5 +99,11 @@ namespace HuesBox
         {
             Navigation.PushAsync(new ResultsPage(ColorUserInput, HexValueRed, HexValueBlue, HexValueGreen, ColorRed, ColorBlue, ColorGreen));
         }
+
+
+        private void CameraPageButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new CameraPage());
+        }
     }
 }
