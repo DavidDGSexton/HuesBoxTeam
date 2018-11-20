@@ -4,7 +4,7 @@
              x:Class="HuesBox.CameraPage">
     <ContentPage.Content>
         <StackLayout>
-            <Button x:Name="CameraButton" Text="Take Photo" />
+            <Button x:Name="CameraButton" Text="Take Photo" Clicked="CameraButton_Clicked"/>
             <Image x:Name="PhotoImage" />
         </StackLayout>
     </ContentPage.Content>
