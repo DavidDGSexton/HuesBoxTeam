@@ -48,15 +48,33 @@
                         HorizontalOptions="FillAndExpand"
                         ThumbColor="Blue"
                         MaximumTrackColor="DarkGray"
-                        MinimumTrackColor="Blue"
-                />
+                        MinimumTrackColor="Blue" />
             </StackLayout>
-
-            <StackLayout Spacing="-10" Margin="30,0,0,20" Orientation="Horizontal">
+            
+                
+             <StackLayout>
+                    <Image Source="cameraIcon.png"
+                        x:Name="CameraButton"
+                        HeightRequest="65"
+                        WidthRequest="65"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="Center" >
+                        <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="CameraButton_Tapped"/>
+                    </Image.GestureRecognizers>
+                    </Image>
+                 <Label Text="Take a picture"
+                       FontSize="Medium"
+                       TextColor="Black">
+           
+                </Label>
+             </StackLayout>
+                
+             <StackLayout Orientation="Horizontal" Margin="0, 0, 0, 30">
                 <Image Source="submitButton.png"
                    x:Name="SubmitButton"
-                       HeightRequest="50"
-                       WidthRequest="50"
+                       HeightRequest="40"
+                       WidthRequest="40"
                        HorizontalOptions="FillAndExpand"
                        VerticalOptions="Center"
                        >
@@ -64,16 +82,8 @@
                         <TapGestureRecognizer Tapped="SubmitButton_Tapped"/>
                     </Image.GestureRecognizers>
                 </Image>
-                    <Button x:Name="CameraPageButton"
-                        Text="Camera PlaceHolder"
-                        HorizontalOptions="CenterAndExpand"
-                        VerticalOptions="Center"
-                        Clicked="CameraPageButton_Clicked"
-                        >
-                        
-                    </Button>
-                
             </StackLayout>
+                
         </StackLayout>
       </ScrollView>
     </ContentPage.Content>
