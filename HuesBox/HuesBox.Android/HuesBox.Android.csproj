@@ -30,9 +30,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <AotAssemblies>false</AotAssemblies>
-    <EnableLLVM>false</EnableLLVM>
-    <BundleAssemblies>false</BundleAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -100,6 +97,7 @@
     <AndroidResource Include="Resources\drawable\submitButton.png" />
     <AndroidResource Include="Resources\drawable\envelopeContactUsButton.png" />
     <AndroidResource Include="Resources\drawable\paintBrushSelectColorButton.png" />
+    <AndroidResource Include="Resources\drawable\cameraIcon.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />

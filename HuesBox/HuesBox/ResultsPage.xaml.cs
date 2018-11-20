@@ -14,13 +14,16 @@ namespace HuesBox
 	public partial class ResultsPage : ContentPage
 	{
         public ObservableCollection<ColorResults> ColorResults { get; set; }
+        public ObservableCollection<Color> Compliments { get; set; }
         public ResultsPage(String UserInput, String HexValueRed, String HexValueBlue, String HexValueGreen, Double ColorRed, Double ColorBlue, Double ColorGreen)
 		{
             
 			InitializeComponent ();
             UserInputBoxView.BackgroundColor = Color.FromHex(UserInput);
             this.ColorResults = new ObservableCollection<ColorResults>();
-
+            this.Compliments = new ObservableCollection<Color>();
+            this.Compliments.Add(Color.FromHex(HexValueBlue + HexValueRed + HexValueGreen));
+            ResultsListView.ItemsSource = this.Compliments;
 		}
 	}
     public class ColorResults
