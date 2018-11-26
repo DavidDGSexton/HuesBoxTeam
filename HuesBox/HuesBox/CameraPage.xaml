@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Button x:Name="CameraButton" Text="Take Photo" Clicked="CameraButton_Clicked"/>
-            <Image x:Name="PhotoImage" />
+            <Image x:Name="pictureFromPage" HeightRequest="300" WidthRequest="300" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
