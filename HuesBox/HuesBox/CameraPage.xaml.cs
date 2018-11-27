@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Plugin.Media;
+using System.Drawing;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -13,6 +14,7 @@ namespace HuesBox
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class CameraPage : ContentPage
 	{
+
         public CameraPage()
         {
             InitializeComponent ();
@@ -23,6 +25,7 @@ namespace HuesBox
         private async void CameraButton_Clicked(object sender, EventArgs e)
         {
             await CrossMedia.Current.Initialize();
+          
 
             if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
             {
@@ -47,6 +50,12 @@ namespace HuesBox
                 var stream = file.GetStream();
                 return stream;
             });
+        }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+
+           
         }
     }
 }
