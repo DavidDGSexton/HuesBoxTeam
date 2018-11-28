@@ -19,10 +19,11 @@
                                 <BoxView WidthRequest="50"
                                          HeightRequest="50"
                                          x:Name="ComplimentBoxView"
-                                         BackgroundColor="{Binding}"/>
-                                <Label Text="Color1"
+                                         BackgroundColor="{Binding HexColor}"/>
+                                <Label Text="{Binding HexValue}"
                                        FontSize="20"
-                                       TextColor="Red"/>
+                                       TextColor="Black"
+                                       />
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
