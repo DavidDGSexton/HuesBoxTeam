@@ -15,15 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Mono.Android">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v8.1\Mono.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Platform.Android">
-      <HintPath>..\..\..\..\..\.nuget\packages\xamarin.forms\3.1.0.697729\lib\MonoAndroid10\Xamarin.Forms.Platform.Android.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
     <EmbeddedResource Update="CameraPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
