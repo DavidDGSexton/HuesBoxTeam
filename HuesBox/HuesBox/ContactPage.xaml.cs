@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Essentials;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -27,7 +26,7 @@ namespace HuesBox
             recipients.Add("David.sexton777@gmail.com");
              
 
-            await SendEmail(EntrySubject.Text, EntryBody.Text, recipients);
+            await SendEmail("HBContact :" + EntryName.Text + " - " + EntryEmail.Text, EntryBody.Text, recipients);
         }
 
         public async Task SendEmail(string subject, string body, List<string> recipients)

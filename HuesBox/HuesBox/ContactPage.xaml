@@ -3,12 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HuesBox.ContactPage">
     <ContentPage.Content>
-        <StackLayout Spacing="10">
-          
-            <Entry x:Name="EntrySubject" Text="Subject" ></Entry>
-            <Label Text="Body"></Label>
-            <Editor x:Name="EntryBody" Text="" ></Editor>
-            <Button x:Name="Test" Clicked="Test_Clicked" Text="Send Test Email"/>
+        <StackLayout Spacing="10" Margin="20">
+            <Entry x:Name="EntryName" Placeholder="Name" ></Entry>
+            <Entry x:Name="EntryEmail" Placeholder="Email" ></Entry>
+            <Label Text="Body" FontSize="18"></Label>
+            <Editor x:Name="EntryBody" Text="" VerticalOptions="FillAndExpand"></Editor>
+            <Button x:Name="Test" Clicked="Test_Clicked" Text="Send Email" HorizontalOptions="End" VerticalOptions="End"/>
 
         </StackLayout>
     </ContentPage.Content>
