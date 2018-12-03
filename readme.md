@@ -25,7 +25,7 @@ Currently through the use of the Xam.Plugin.Media NuGet package, the app has the
 This form is used to export the information from the results page to an email and send it to the user. The form will simply ask for the user’s email address. Once input, the user taps the submit button and an email will be sent to that address. The email will contain the information from the results page, which is the selected color along with all the complimentary colors and respective hex values.
 
 ### Contact Page
-The user fills out information in the required fields of Name, Email, and Message.  Then the user submits message.  This message is picked up in our database for review and follow up.
+Here we have a field for subject entry, an editor for the body of the email, and a button to ask the device to load a mail app to copy the email into. The recipients are set in the code behind by being added as a string list. The email function is setup using the NuGet package 'Xamarin.Essentials'. Its email task uses only the three variables for subject, body, and recipients.
 
 
 https://serennu.com/colour/rgbtohsl.php
