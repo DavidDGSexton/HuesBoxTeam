@@ -3,10 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HuesBox.ContactPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Spacing="10">
+          
+            <Entry x:Name="EntrySubject" Text="Subject" ></Entry>
+            <Label Text="Body"></Label>
+            <Editor x:Name="EntryBody" Text="" ></Editor>
+            <Button x:Name="Test" Clicked="Test_Clicked" Text="Send Test Email"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -7,23 +7,6 @@
             <Button x:Name="CameraButton" Text="Take Photo" Clicked="CameraButton_Clicked"/>
             <Image x:Name="pictureFromPage" HeightRequest="300" WidthRequest="300" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
 
-            <StackLayout x:Name="colors" 
-                         IsVisible="false">
-
-                <Label Text="Colors Detected" FontSize="24"/>
-
-                <BoxView x:Name="firstColor"
-                         WidthRequest="50"
-                         HeightRequest="50"/>
-
-                <BoxView x:Name="secondColor"
-                         WidthRequest="50"
-                         HeightRequest="50"/>
-
-                <BoxView x:Name="thirdColor"
-                         WidthRequest="50"
-                         HeightRequest="50"/>
-            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

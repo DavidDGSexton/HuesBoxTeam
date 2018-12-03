@@ -31,13 +31,13 @@ namespace HuesBox
 
         private void envelopeIconGestureRecognizer_OnTapped(object sender, System.EventArgs e)
         {
-            Navigation.PushAsync(new ContentPage());
+            Navigation.PushAsync(new ContactPage());
         }
 
 
         private void contactUsButtonGestureRecognizer_OnTapped(object sender, System.EventArgs e)
         {
-            Navigation.PushAsync(new ContentPage());
+            Navigation.PushAsync(new ContactPage());
         }
     }
 

@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Plugin.Media;
 using System.Drawing;
+using Plugin.ImageEdit;
+
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -51,14 +53,8 @@ namespace HuesBox
                 return stream;
             });
 
-
            
         }
 
-        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
-        {
-
-           
-        }
     }
 }
