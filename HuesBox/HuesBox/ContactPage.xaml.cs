@@ -22,11 +22,11 @@ namespace HuesBox
         {
             List<string> recipients = new List<string>();
             
-            recipients.Add("Dsexton@gus.pittstate.edu");
-            recipients.Add("David.sexton777@gmail.com");
+            recipients.Add("Fakeemail2@mail.mail");
+            recipients.Add("Fakeemail@mail.mail");
              
 
-            await SendEmail("HBContact :" + EntryName.Text + " - " + EntryEmail.Text, EntryBody.Text, recipients);
+            await SendEmail("HBContact: " + EntryName.Text + " - " + EntryEmail.Text, EntryBody.Text, recipients);
         }
 
         public async Task SendEmail(string subject, string body, List<string> recipients)
