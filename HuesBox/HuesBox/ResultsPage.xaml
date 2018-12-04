@@ -25,10 +25,12 @@
                                        TextColor="Black"
                                        />
                             </StackLayout>
+                            
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <Button Text="Export Colors" x:Name="ExportButton" Clicked="ExportButton_Clicked"> </Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -8,7 +8,7 @@
             <Entry x:Name="EntryEmail" Placeholder="Email" ></Entry>
             <Label Text="Body" FontSize="18"></Label>
             <Editor x:Name="EntryBody" Text="" VerticalOptions="FillAndExpand"></Editor>
-            <Button x:Name="Test" Clicked="Test_Clicked" Text="Send Email" HorizontalOptions="End" VerticalOptions="End"/>
+            <Button x:Name="EmailButton" Clicked="EmailButton_Clicked" Text="Send Email" HorizontalOptions="End" VerticalOptions="End"/>
 
         </StackLayout>
     </ContentPage.Content>

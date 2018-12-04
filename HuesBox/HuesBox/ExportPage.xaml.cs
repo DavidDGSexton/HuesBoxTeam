@@ -11,23 +11,13 @@ using Xamarin.Forms.Xaml;
 namespace HuesBox
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ContactPage : ContentPage
+	public partial class ExportPage : ContentPage
 	{
-		public ContactPage ()
+		public ExportPage ()
 		{
 			InitializeComponent ();
 		}
 
-        private async void EmailButton_Clicked(object sender, EventArgs e)
-        {
-            List<string> recipients = new List<string>();
-            
-            recipients.Add("Fakeemail2@mail.mail");
-            recipients.Add("Fakeemail@mail.mail");
-             
-
-            await SendEmail("HBContact: " + EntryName.Text + " - " + EntryEmail.Text, EntryBody.Text, recipients);
-        }
 
         public async Task SendEmail(string subject, string body, List<string> recipients)
         {
@@ -52,6 +42,16 @@ namespace HuesBox
                 // Some other exception occurred
             }
         }
-    }
 
+        private async void ExportButton_Clicked(object sender, EventArgs e)
+        {
+            List<string> recipients = new List<string>();
+
+            recipients.Add(RecipientEmail.Text);
+            
+
+
+            await SendEmail("HuesBox Export",  "From: " + UserName.Text + "\r\n\r\n" + "List of Colors", recipients);
+        }
+    }
 }

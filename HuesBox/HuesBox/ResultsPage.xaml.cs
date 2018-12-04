@@ -183,5 +183,10 @@ namespace HuesBox
             }
             return Var1;
         }
-	}
+
+        private void ExportButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ExportPage());
+        }
+    }
 }

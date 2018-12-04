@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HuesBox.ExportPage">
+    <ContentPage.Content>
+        <StackLayout Spacing="10" Margin="20">
+            <Entry x:Name="RecipientEmail" Placeholder="Email" ></Entry>
+            <Entry x:Name="UserName" Placeholder="Name" ></Entry>
+            <Label Text="" VerticalOptions="FillAndExpand"></Label>
+            <Button x:Name="ExportButton" Clicked="ExportButton_Clicked" Text="Export to Email" HorizontalOptions="End" VerticalOptions="End"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
