@@ -25,6 +25,7 @@ namespace HuesBox
    {
             
 			InitializeComponent ();
+            UserInputLabel.Text = UserInput;
             UserInputBoxView.BackgroundColor = Color.FromHex(UserInput);
             this.Compliments = new ObservableCollection<ColorOutput>();
             NewRed = 255 - ColorRed;

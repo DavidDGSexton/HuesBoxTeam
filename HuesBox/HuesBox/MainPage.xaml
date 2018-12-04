@@ -13,13 +13,13 @@
             
             
             <StackLayout Orientation="Horizontal"
-                         Padding="0,10,0,60">
+                         Padding="0,10,0,20">
                 
                 
         <Image Source="paintBrushIcon.png"
-               WidthRequest="65"
-               HeightRequest="65"
-               Margin="30, 0, 30, 10"
+               WidthRequest="90"
+               HeightRequest="90"
+               Margin="70, 0, 80, 10"
                HorizontalOptions="Center"
                x:Name="paintBrushIcon">
                 <Image.GestureRecognizers>
@@ -29,8 +29,8 @@
                 
                 
         <Image Source="selectColorButton.png"
-               WidthRequest="90"
-               HeightRequest="90"
+               WidthRequest="125"
+               HeightRequest="115"
                HorizontalOptions="Center"
                VerticalOptions="CenterAndExpand"
                x:Name="selectColorButton">
@@ -43,9 +43,9 @@
             
             <StackLayout Orientation="Horizontal">
         <Image Source="envelopeIcon.png"
-               WidthRequest="65"
-               HeightRequest="65"
-               Margin="30, 0, 30, 10"
+               WidthRequest="90"
+               HeightRequest="90"
+               Margin="70, 0, 80, 10"
                HorizontalOptions="Center"
                x:Name="envelopeIcon">
                     <Image.GestureRecognizers>
@@ -55,8 +55,8 @@
                 
                 
        <Image Source="contactUsButton.png"
-               WidthRequest="90"
-               HeightRequest="90"
+               WidthRequest="125"
+               HeightRequest="115"
                HorizontalOptions="Center"
                VerticalOptions="CenterAndExpand"
                x:Name="contactUsButton">
@@ -67,6 +67,7 @@
             </StackLayout>
             
         <Label Text="Ad space" 
+               FontSize="Medium"
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
             
