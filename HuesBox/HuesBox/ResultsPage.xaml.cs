@@ -39,7 +39,9 @@ namespace HuesBox
 
             this.Compliments.Add(new ColorOutput { HexColor = Color.FromHex(NewHexRed + NewHexGreen + NewHexBlue), HexValue = "# " + NewHexRed + NewHexGreen + NewHexBlue});
 
-            this.Compliments.Add(new ColorOutput { HexColor = Color.FromHex(RGBtoHSL(ColorRed, ColorBlue, ColorGreen)), HexValue = "# " + RGBtoHSL(ColorRed, ColorBlue, ColorGreen)});
+            String HSLHex = RGBtoHSL(ColorRed, ColorGreen, ColorBlue);
+
+            this.Compliments.Add(new ColorOutput { HexColor = Color.FromHex(HSLHex), HexValue = "# " + HSLHex});
 
             ResultsListView.ItemsSource = this.Compliments;
 		}
@@ -49,7 +51,7 @@ namespace HuesBox
             public Color HexColor { get; set; }
             public String HexValue { get; set; }
         }
-        public static String RGBtoHSL(double ColorRed, double ColorBlue, double ColorGreen)
+        public static String RGBtoHSL(double ColorRed, double ColorGreen, double ColorBlue)
         {
             double Light = 0;
             double Hue = 0;
@@ -58,9 +60,9 @@ namespace HuesBox
             double NewHSLRed = 0;
             double NewHSLBlue = 0;
             double NewHSLGreen = 0;
-            double HSLRed = ColorRed / 255;
-            double HSLBlue = ColorBlue / 255;
-            double HSLGreen = ColorGreen / 255;
+            double HSLRed = ColorRed / 255f;
+            double HSLBlue = ColorBlue / 255f;
+            double HSLGreen = ColorGreen / 255f;
             double Red = 0;
             double Blue = 0;
             double Green = 0;
@@ -75,15 +77,15 @@ namespace HuesBox
             double ValMax = HSLArray.Max();
             double ValRange = ValMax - ValMin;
 
-            Light = (ValMax + ValMin) / 2;
-            if(ValRange == 0)
+            Light = (ValMax + ValMin) / 2f;
+            if (ValRange == 0)
             {
                 Hue = 0;
                 Saturation = 0;
             }
             else
             {
-                if(Light < 0.5)
+                if (Light < 0.5)
                 {
                     Saturation = ValRange / (ValMax + ValMin);
 
@@ -92,29 +94,29 @@ namespace HuesBox
                 {
                     Saturation = ValRange / (2 - ValMax - ValMin);
                 }
-                NewHSLRed = (((ValMax - HSLRed) / 6) + (ValRange / 2)) / ValRange;
-                NewHSLBlue = (((ValMax - HSLBlue) / 6) + (ValRange / 2)) / ValRange;
-                NewHSLGreen = (((ValMax - HSLGreen) / 6) + (ValRange / 2)) / ValRange;
+                NewHSLRed = (((ValMax - HSLRed) / 6f) + (ValRange / 2f)) / ValRange;
+                NewHSLBlue = (((ValMax - HSLBlue) / 6f) + (ValRange / 2f)) / ValRange;
+                NewHSLGreen = (((ValMax - HSLGreen) / 6f) + (ValRange / 2f)) / ValRange;
 
-                if(HSLRed == ValMax)
+                if (HSLRed == ValMax)
                 {
                     Hue = NewHSLBlue - NewHSLGreen;
                 }
                 else if (HSLGreen == ValMax)
                 {
-                    Hue = (1 / 3) + NewHSLRed - NewHSLBlue;
+                    Hue = (1f / 3f) + NewHSLRed - NewHSLBlue;
                 }
                 else if (HSLBlue == ValMax)
                 {
-                    Hue = (2 / 3) + NewHSLGreen - NewHSLRed;
+                    Hue = (2f / 3f) + NewHSLGreen - NewHSLRed;
                 }
                 
-                if(Hue < 0)
+                if (Hue < 0)
                 {
                     Hue += 1;
                 }
 
-                if(Hue > 1)
+                if (Hue > 1)
                 {
                     Hue -= 1;
                 }
@@ -123,12 +125,12 @@ namespace HuesBox
             }
 
             Hue2 = Hue + .5;
-            if(Hue2 > 1)
+            if (Hue2 > 1)
             {
                 Hue2 -= 1;
             }
 
-            if(Saturation == 0)
+            if (Saturation == 0)
             {
                 Red = Light * 255;
                 Green = Light * 255;
@@ -136,7 +138,7 @@ namespace HuesBox
             }
             else
             {
-                if(Light < 0.5)
+                if (Light < 0.5)
                 {
                     Var2 = Light * (1 + Saturation);
                 }
@@ -145,9 +147,9 @@ namespace HuesBox
                     Var2 = (Light + Saturation) - (Saturation * Light);
                 }
                 Var1 = 2 * Light - Var2;
-                Red = 255 * HuetoRGB(Var1, Var2, Hue+(1/3));
-                Green = 255 * HuetoRGB(Var1, Var2, Hue);
-                Blue = 255 * HuetoRGB(Var1, Var2, Hue - (1 / 3));
+                Red = 255 * HuetoRGB(Var1, Var2, (Hue2 + (1f/3f)));
+                Green = 255 * HuetoRGB(Var1, Var2, Hue2);
+                Blue = 255 * HuetoRGB(Var1, Var2, Hue2 - (1f / 3f));
 
             }
             HexRed = Convert.ToInt32(Red).ToString("X2");
@@ -159,12 +161,12 @@ namespace HuesBox
 
         public static double HuetoRGB (double Var1, double Var2, double Hue)
         {
-            if(Hue < 0)
+            if (Hue < 0)
             {
                 Hue += 1;
             }
 
-            if(Hue > 1)
+            if (Hue > 1)
             {
                 Hue -= 1;
             }
@@ -173,13 +175,13 @@ namespace HuesBox
             {
                 return (Var1 + (Var2 - Var1) * 6 * Hue);
             }
-            if((2*Hue) < 1)
+            if ((2 * Hue) < 1)
             {
                 return Var2;
             }
             if ((3 * Hue) < 2)
             {
-                return (Var1 + (Var2 - Var1) * ((2 / 3 - Hue) * 6));
+                return (Var1 + (Var2 - Var1) * ((2f / 3f - Hue) * 6));
             }
             return Var1;
         }
