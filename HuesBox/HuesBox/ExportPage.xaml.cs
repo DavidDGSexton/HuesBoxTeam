@@ -43,12 +43,15 @@ namespace HuesBox
             }
         }
 
-        private async void ExportButton_Clicked(object sender, EventArgs e)
+
+
+        private async void ExportToEmailButton_Tapped(object sender, EventArgs e)
         {
             List<string> recipients = new List<string>();
 
             recipients.Add(RecipientEmail.Text);
             
+
 
 
             await SendEmail("HuesBox Export",  "From: " + UserName.Text + "\r\n\r\n" + "List of Colors", recipients);

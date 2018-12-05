@@ -18,7 +18,7 @@ namespace HuesBox
 			InitializeComponent ();
 		}
 
-        private async void EmailButton_Clicked(object sender, EventArgs e)
+        private async void SendEmailButton_Tapped(object sender, EventArgs e)
         {
             List<string> recipients = new List<string>();
             

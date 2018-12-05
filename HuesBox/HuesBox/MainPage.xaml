@@ -9,7 +9,9 @@
     <StackLayout>
         <!-- Place new controls here -->
         <Image Source="huesBoxLogo.png"
-               Margin="20" />
+               HeightRequest="200"
+               WidthRequest="200"
+               Margin="20, 0, 20, 20" />
             
             
             <StackLayout Orientation="Horizontal"

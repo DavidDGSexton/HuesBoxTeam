@@ -1,12 +1,50 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HuesBox.CameraPage">
+             x:Class="HuesBox.CameraPage"
+             Title="Camera">
     <ContentPage.Content>
-        <StackLayout>
-            <Button x:Name="CameraButton" Text="Take Photo" Clicked="CameraButton_Clicked"/>
-            <Image x:Name="pictureFromPage" HeightRequest="300" WidthRequest="300" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+        <ScrollView>
+            
+        <StackLayout>            
+            
+            <Label Text="Let's get started!"
+                   TextColor="Black"
+                   FontSize="40"
+                   Margin="15, 25, 15, 25"/>
+            
+            <Label Text="1. Take a photo"
+                   TextColor="Black"
+                   FontSize="25"
+                   Margin="15, 25, 15, 25"/>
+            
+            <Label Text="2. Grab a color from your image by selecting a pixel"
+                   TextColor="Black"
+                   FontSize="25"
+                   Margin="15, 25, 15, 25"/>
+            
+            <Label Text="3. Use that color to find its complimentary colors"
+                   TextColor="Black"
+                   FontSize="25"
+                   Margin="15, 25, 15, 25"/>
+            
+             <Image Source="takePhotoButton.png"
+               HorizontalOptions="Center"
+               x:Name="TakePhotoButton"
+               Margin="0, 30, 0, 0">
+                <Image.GestureRecognizers>
+                   <TapGestureRecognizer Tapped="TakePhotoButton_Tapped"/>
+                </Image.GestureRecognizers>
+             </Image>
+            
+            <Image x:Name="pictureFromPage"
+                   HeightRequest="300"
+                   WidthRequest="300"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   Margin="30, 0, 0, 30" />
 
         </StackLayout>
+       </ScrollView>
     </ContentPage.Content>
 </ContentPage>

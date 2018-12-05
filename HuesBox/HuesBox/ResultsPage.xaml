@@ -4,6 +4,7 @@
              x:Class="HuesBox.ResultsPage"
              Title="Results">
     <ContentPage.Content>
+      
         <StackLayout>
             <StackLayout>
                 <Label Text="Hex code for color selected:"
@@ -44,7 +45,7 @@
                                 <Label Text="{Binding HexValue}"
                                        FontSize="20"
                                        TextColor="Black"
-                                       />
+                                       Margin="0"/>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
@@ -60,7 +61,6 @@
                         <TapGestureRecognizer Tapped="ExportButton_Tapped"/>
                     </Image.GestureRecognizers>
                 </Image>
-            
             
         </StackLayout>
     </ContentPage.Content>

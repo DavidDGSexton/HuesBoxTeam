@@ -103,6 +103,9 @@
     <AndroidResource Include="Resources\drawable\envelopeContactUsButton.png" />
     <AndroidResource Include="Resources\drawable\paintBrushSelectColorButton.png" />
     <AndroidResource Include="Resources\drawable\cameraIcon.png" />
+    <AndroidResource Include="Resources\drawable\exportToEmailButton.png" />
+    <AndroidResource Include="Resources\drawable\takePhotoButton.png" />
+    <AndroidResource Include="Resources\drawable\sendEmailButton.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />
