@@ -33,11 +33,13 @@
                    TextColor="Black"
                    Margin="0, 15, 0, 20"
                    HorizontalOptions="CenterAndExpand"/>
+            
             <ListView x:Name="ResultsListView">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Orientation="Horizontal">
+                            <StackLayout Orientation="Horizontal"
+                                         Margin="20, 0, 0, 20">
                                 <BoxView WidthRequest="50"
                                          HeightRequest="50"
                                          x:Name="ComplimentBoxView"
