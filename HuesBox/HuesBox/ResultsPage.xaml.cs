@@ -25,7 +25,7 @@ namespace HuesBox
    {
             
 			InitializeComponent ();
-            UserInputLabel.Text = UserInput;
+            UserInputLabel.Text = "#" + UserInput;
             UserInputBoxView.BackgroundColor = Color.FromHex(UserInput);
             this.Compliments = new ObservableCollection<ColorOutput>();
             NewRed = 255 - ColorRed;
@@ -42,7 +42,7 @@ namespace HuesBox
 
             String HSLHex = RGBtoHSL(ColorRed, ColorGreen, ColorBlue);
 
-            this.Compliments.Add(new ColorOutput { HexColor = Color.FromHex(HSLHex), HexValue = "# " + HSLHex});
+            this.Compliments.Add(new ColorOutput { HexColor = Color.FromHex(HSLHex), HexValue = "#" + HSLHex});
 
             ResultsListView.ItemsSource = this.Compliments;
 		}
