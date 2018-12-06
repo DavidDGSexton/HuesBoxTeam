@@ -39,10 +39,14 @@ namespace HuesBox
 
 
             this.Compliments.Add(new ColorOutput { HexColor = Color.FromHex(NewHexRed + NewHexGreen + NewHexBlue), HexValue = "# " + NewHexRed + NewHexGreen + NewHexBlue});
+            for(int i = 0; i < 5; i++)
+            {
+                String HSLHex = RGBtoHSL(ColorRed, ColorGreen, ColorBlue, i);
+                this.Compliments.Add(new ColorOutput { HexColor = Color.FromHex(HSLHex), HexValue = "#" + HSLHex });
+            }
+            
 
-            String HSLHex = RGBtoHSL(ColorRed, ColorGreen, ColorBlue);
-
-            this.Compliments.Add(new ColorOutput { HexColor = Color.FromHex(HSLHex), HexValue = "#" + HSLHex});
+            
 
             ResultsListView.ItemsSource = this.Compliments;
 		}
@@ -52,7 +56,7 @@ namespace HuesBox
             public Color HexColor { get; set; }
             public String HexValue { get; set; }
         }
-        public static String RGBtoHSL(double ColorRed, double ColorGreen, double ColorBlue)
+        public static String RGBtoHSL(double ColorRed, double ColorGreen, double ColorBlue, int i)
         {
             double Light = 0;
             double Hue = 0;
@@ -125,7 +129,7 @@ namespace HuesBox
                 
             }
 
-            Hue2 = Hue + .5;
+            Hue2 = Hue + .5 + i * (1f/50f);
             if (Hue2 > 1)
             {
                 Hue2 -= 1;
@@ -148,7 +152,7 @@ namespace HuesBox
                     Var2 = (Light + Saturation) - (Saturation * Light);
                 }
                 Var1 = 2 * Light - Var2;
-                Red = 255 * HuetoRGB(Var1, Var2, (Hue2 + (1f/3f)));
+                Red = 255 * HuetoRGB(Var1, Var2, (Hue2 + (1f / 3f)));
                 Green = 255 * HuetoRGB(Var1, Var2, Hue2);
                 Blue = 255 * HuetoRGB(Var1, Var2, Hue2 - (1f / 3f));
 
@@ -197,3 +201,4 @@ namespace HuesBox
 
     }
 }
+
