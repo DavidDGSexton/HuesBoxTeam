@@ -1,13 +1,38 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HuesBox.ExportPage">
+             x:Class="HuesBox.ExportPage"
+             Title="Export">
     <ContentPage.Content>
+        
         <StackLayout Spacing="10" Margin="20">
-            <Entry x:Name="RecipientEmail" Placeholder="Email" ></Entry>
-            <Entry x:Name="UserName" Placeholder="Name" ></Entry>
-            <Label Text="" VerticalOptions="FillAndExpand"></Label>
-            <Button x:Name="ExportButton" Clicked="ExportButton_Clicked" Text="Export to Email" HorizontalOptions="End" VerticalOptions="End"/>
+            
+             <StackLayout>
+                <Label Text="Enter preferred email below:"
+                       FontSize="30"
+                       TextColor="Black"
+                       HorizontalOptions="CenterAndExpand"
+                       Margin="0, 25, 0, 45"/>
+            </StackLayout>
+            
+            <Entry x:Name="RecipientEmail" Placeholder="Email"
+                   Margin="0, 0, 0, 30"></Entry>
+            <Entry x:Name="UserName" Placeholder="Name"
+                   Margin="0, 0, 0, 0"></Entry>
+            
+            
+            <Image Source="exportToEmailButton.png"
+                        x:Name="exportToEmailButton"
+                        HeightRequest="180"
+                        WidthRequest="260"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" >
+                        <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ExportToEmailButton_Tapped"/>
+                    </Image.GestureRecognizers>
+                    </Image>
+
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

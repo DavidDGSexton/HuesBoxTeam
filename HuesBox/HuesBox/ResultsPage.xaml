@@ -4,28 +4,42 @@
              x:Class="HuesBox.ResultsPage"
              Title="Results">
     <ContentPage.Content>
+      
         <StackLayout>
             <StackLayout>
-                <Label Text="Hex code for color selected" FontSize="20"/>
+                <Label Text="Hex code for color selected:"
+                       FontSize="30"
+                       TextColor="Black"
+                       HorizontalOptions="CenterAndExpand"
+                       Margin="0, 10, 0, 10"/>
             </StackLayout>
-             <!--NEED TO DISPLAY USER INPUT HEX-->
+            
+           
             <StackLayout Orientation="Horizontal">
                 <Label x:Name="UserInputLabel"
-                       TextColor="Maroon"
-                       FontSize="20"/>
+                       TextColor="Black"
+                       FontSize="42"
+                       Margin="0, 0, 0, 15"
+                       HorizontalOptions="CenterAndExpand"/>
             </StackLayout>
+            
             
             <StackLayout>
                 <BoxView BackgroundColor="{Binding UserInput}" HeightRequest="100" x:Name="UserInputBoxView" />
             </StackLayout>
             
-            <Label Text= "Your Complimentary Colors:"
+            <Label Text= "Your COMPLIMENTARY colors:"
+                   FontSize="22"
+                   TextColor="Black"
+                   Margin="0, 15, 0, 20"
                    HorizontalOptions="CenterAndExpand"/>
+            
             <ListView x:Name="ResultsListView">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Orientation="Horizontal">
+                            <StackLayout Orientation="Horizontal"
+                                         Margin="20, 0, 0, 20">
                                 <BoxView WidthRequest="50"
                                          HeightRequest="50"
                                          x:Name="ComplimentBoxView"
@@ -33,14 +47,23 @@
                                 <Label Text="{Binding HexValue}"
                                        FontSize="20"
                                        TextColor="Black"
-                                       />
+                                       Margin="0"/>
                             </StackLayout>
-                            
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Button Text="Export Colors" x:Name="ExportButton" Clicked="ExportButton_Clicked"> </Button>
+            
+            <Image Source="exportButton.png"
+                       x:Name="ExportButton"
+                       HeightRequest="150"
+                       WidthRequest="150"
+                       HorizontalOptions="Center">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ExportButton_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

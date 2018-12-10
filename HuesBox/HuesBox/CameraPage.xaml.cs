@@ -24,7 +24,7 @@ namespace HuesBox
           
         }
 
-        private async void CameraButton_Clicked(object sender, EventArgs e)
+        private async void TakePhotoButton_Tapped(object sender, EventArgs e)
         {
             await CrossMedia.Current.Initialize();
           

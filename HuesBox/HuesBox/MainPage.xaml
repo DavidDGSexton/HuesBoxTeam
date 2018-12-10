@@ -9,7 +9,9 @@
     <StackLayout>
         <!-- Place new controls here -->
         <Image Source="huesBoxLogo.png"
-               Margin="20" />
+               HeightRequest="200"
+               WidthRequest="200"
+               Margin="20, 0, 20, 20" />
             
             
             <StackLayout Orientation="Horizontal"
@@ -19,7 +21,7 @@
         <Image Source="paintBrushIcon.png"
                WidthRequest="90"
                HeightRequest="90"
-               Margin="70, 0, 80, 10"
+               Margin="60, 0, 80, 10"
                HorizontalOptions="Center"
                x:Name="paintBrushIcon">
                 <Image.GestureRecognizers>
@@ -45,7 +47,7 @@
         <Image Source="envelopeIcon.png"
                WidthRequest="90"
                HeightRequest="90"
-               Margin="70, 0, 80, 10"
+               Margin="60, 0, 80, 10"
                HorizontalOptions="Center"
                x:Name="envelopeIcon">
                     <Image.GestureRecognizers>

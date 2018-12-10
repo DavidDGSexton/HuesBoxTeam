@@ -1,15 +1,48 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HuesBox.ContactPage">
+             x:Class="HuesBox.ContactPage"
+             Title="Contact">
     <ContentPage.Content>
-        <StackLayout Spacing="10" Margin="20">
-            <Entry x:Name="EntryName" Placeholder="Name" ></Entry>
-            <Entry x:Name="EntryEmail" Placeholder="Email" ></Entry>
-            <Label Text="Body" FontSize="18"></Label>
-            <Editor x:Name="EntryBody" Text="" VerticalOptions="FillAndExpand"></Editor>
-            <Button x:Name="EmailButton" Clicked="EmailButton_Clicked" Text="Send Email" HorizontalOptions="End" VerticalOptions="End"/>
-
+        <ScrollView>
+            
+        <StackLayout Spacing="10"
+                     Margin="20">
+            
+          <Label Text="Questions or comments?"
+                 TextColor="Black"
+                 FontSize="30"
+                 Margin="0, 10, 0, 10"/>
+                
+          <Label Text="Fill out a contact form and we will review your message shortly."
+                 TextColor="Black"
+                 FontSize="20"
+                 Margin="0, 0, 0, 25"/>
+                
+            <Entry x:Name="EntryName"
+                   Placeholder="Name" ></Entry>
+            
+            <Entry x:Name="EntryEmail"
+                   Placeholder="Email" ></Entry>
+            
+            <Label Text="Body"
+                   FontSize="18"
+                   Margin="2,0,0,0"></Label>
+            
+            <Editor x:Name="EntryBody"
+                    Text=""
+                    VerticalOptions="FillAndExpand"></Editor>
+            
+            <Image Source="sendEmailButton.png"
+               HorizontalOptions="Center"
+               x:Name="SendEmailButton"
+               Margin="0, 30, 0, 0">
+                <Image.GestureRecognizers>
+                   <TapGestureRecognizer Tapped="SendEmailButton_Tapped"/>
+                </Image.GestureRecognizers>
+             </Image>
+          
         </StackLayout>
+       </ScrollView>
     </ContentPage.Content>
 </ContentPage>
