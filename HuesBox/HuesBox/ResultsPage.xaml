@@ -7,7 +7,7 @@
       
         <StackLayout>
             <StackLayout>
-                <Label Text="Hex code for color selected:"
+                <Label Text="Your selected color"
                        FontSize="30"
                        TextColor="Black"
                        HorizontalOptions="CenterAndExpand"
@@ -28,7 +28,7 @@
                 <BoxView BackgroundColor="{Binding UserInput}" HeightRequest="100" x:Name="UserInputBoxView" />
             </StackLayout>
             
-            <Label Text= "Your COMPLIMENTARY colors:"
+            <Label Text= "Your COMPLIMENTARY colors"
                    FontSize="22"
                    TextColor="Black"
                    Margin="0, 15, 0, 20"

@@ -8,10 +8,11 @@
         <StackLayout Spacing="10" Margin="20">
             
              <StackLayout>
-                <Label Text="Enter preferred email below:"
+                <Label Text="Email your complimentary colors"
                        FontSize="30"
                        TextColor="Black"
                        HorizontalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
                        Margin="0, 25, 0, 45"/>
             </StackLayout>
             
@@ -26,7 +27,7 @@
                         HeightRequest="180"
                         WidthRequest="260"
                         HorizontalOptions="Center"
-                        VerticalOptions="Center" >
+                        VerticalOptions="End" >
                         <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="ExportToEmailButton_Tapped"/>
                     </Image.GestureRecognizers>

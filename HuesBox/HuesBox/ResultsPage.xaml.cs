@@ -20,6 +20,11 @@ namespace HuesBox
         public string NewHexRed { get; set; } = "00";
         public string NewHexBlue { get; set; } = "00";
         public string NewHexGreen { get; set; } = "00";
+        public string ExportColor1 { get; set; } = "#FFFFFF";
+        public string ExportColor2 { get; set; } = "#FFFFFF";
+        public string ExportColor3 { get; set; } = "#FFFFFF";
+        public string ExportColor4 { get; set; } = "#FFFFFF";
+        public string ExportColor5 { get; set; } = "#FFFFFF";
 
         public ResultsPage(String UserInput, String HexValueRed, String HexValueBlue, String HexValueGreen, Double ColorRed, Double ColorBlue, Double ColorGreen)
    {
@@ -36,6 +41,7 @@ namespace HuesBox
             NewHexBlue = Convert.ToInt32(NewBlue).ToString("X2");
             NewHexGreen = Convert.ToInt32(NewGreen).ToString("X2");
 
+            ExportColor1 = "#" + NewHexRed + NewHexGreen + NewHexBlue;
 
 
             this.Compliments.Add(new ColorOutput { HexColor = Color.FromHex(NewHexRed + NewHexGreen + NewHexBlue), HexValue = "# " + NewHexRed + NewHexGreen + NewHexBlue});
@@ -43,6 +49,15 @@ namespace HuesBox
             {
                 String HSLHex = RGBtoHSL(ColorRed, ColorGreen, ColorBlue, i);
                 this.Compliments.Add(new ColorOutput { HexColor = Color.FromHex(HSLHex), HexValue = "#" + HSLHex });
+ 
+                if (i == 0)
+                    { ExportColor2 = "#" + HSLHex; };
+                if (i == 1)
+                    { ExportColor3 = "#" + HSLHex; };
+                if (i == 2)
+                    { ExportColor4 = "#" + HSLHex; };
+                if (i == 3)
+                    { ExportColor5 = "#" + HSLHex; };
             }
             
 
@@ -196,7 +211,7 @@ namespace HuesBox
 
         private void ExportButton_Tapped(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ExportPage());
+            Navigation.PushAsync(new ExportPage(ExportColor1, ExportColor2, ExportColor3, ExportColor4, ExportColor5));
         }
 
     }
