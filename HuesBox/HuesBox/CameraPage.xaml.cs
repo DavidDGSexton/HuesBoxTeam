@@ -53,8 +53,26 @@ namespace HuesBox
                 return stream;
             });
 
-           
+            ColorOne.IsVisible = true;
+            ColorTwo.IsVisible = true;
+            ColorThree.IsVisible = true;
+
         }
 
+
+        private void ColorOne_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ColorTwo_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ColorThree_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

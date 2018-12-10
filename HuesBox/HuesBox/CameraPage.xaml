@@ -3,10 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HuesBox.CameraPage">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Margin="20">
             <Button x:Name="CameraButton" Text="Take Photo" Clicked="CameraButton_Clicked"/>
             <Image x:Name="pictureFromPage" HeightRequest="300" WidthRequest="300" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
-
+            <Button x:Name ="ColorOne" BackgroundColor="Teal" VerticalOptions="StartAndExpand" Margin="-50,0" IsVisible="False" Clicked="ColorOne_Clicked"></Button>
+            <Button x:Name="ColorTwo" BackgroundColor="White" VerticalOptions="StartAndExpand" Margin="-50,0" IsVisible="False" Clicked="ColorTwo_Clicked"></Button>
+            <Button x:Name="ColorThree" BackgroundColor="Red" VerticalOptions="StartAndExpand" Margin="-50,0" IsVisible="False" Clicked="ColorThree_Clicked"></Button>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
