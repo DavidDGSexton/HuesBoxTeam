@@ -8,7 +8,13 @@ using Xamarin.Forms;
 namespace HuesBox
 {
     public partial class MainPage : ContentPage
+    
+
     {
+        public double ColorRed { get; set; } = 0;
+        public double ColorGreen { get; set; } = 0;
+        public double ColorBlue { get; set; } = 0;
+
         public MainPage()
         {
             InitializeComponent();
@@ -19,13 +25,13 @@ namespace HuesBox
 
         private void paintBrushIconGestureRecognizer_OnTapped(object sender, System.EventArgs e)
         {
-            Navigation.PushAsync(new SelectColorPage());
+            Navigation.PushAsync(new SelectColorPage(ColorRed, ColorGreen, ColorBlue, false));
         }
 
 
         private void selectColorButtonGestureRecognizer_OnTapped(object sender, System.EventArgs e)
         {
-            Navigation.PushAsync(new SelectColorPage());
+            Navigation.PushAsync(new SelectColorPage(ColorRed, ColorGreen, ColorBlue, false));
         }
 
 

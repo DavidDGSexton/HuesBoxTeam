@@ -26,9 +26,31 @@ namespace HuesBox
         //Users entered value
         public string ColorUserInput { get; set; } = "000000";
 
-        public SelectColorPage ()
+        public SelectColorPage (Double CameraRed, Double CameraGreen, Double CameraBlue, Boolean IsUsingCameraColor)
 		{
 			InitializeComponent ();
+
+            if (IsUsingCameraColor == false)
+            { }
+
+            else 
+            {
+
+                ColorRed = CameraRed;
+                ColorGreen = CameraGreen;
+                ColorBlue = CameraBlue;
+
+                HexValueRed = Convert.ToInt32(ColorRed).ToString("X2");
+                HexValueGreen = Convert.ToInt32(ColorGreen).ToString("X2");
+                HexValueBlue = Convert.ToInt32(ColorBlue).ToString("X2");
+
+                ColorEntry.Text = "#" + HexValueRed + HexValueGreen + HexValueBlue;
+                ColorPreview.Color = Color.FromHex(HexValueRed + HexValueGreen + HexValueBlue);
+            }
+              
+                
+                
+
 		}
 
         private void Slider_ValueRed(object sender, ValueChangedEventArgs e)

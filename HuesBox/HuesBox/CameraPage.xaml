@@ -6,45 +6,28 @@
     <ContentPage.Content>
         <ScrollView>
             
-        <StackLayout>            
-            
-            <Label Text="Let's get started!"
-                   TextColor="Black"
-                   FontSize="40"
-                   Margin="15, 25, 15, 25"/>
-            
-            <Label Text="1. Take a photo"
-                   TextColor="Black"
-                   FontSize="25"
-                   Margin="15, 25, 15, 25"/>
-            
-            <Label Text="2. Grab a color from your image by selecting a pixel"
-                   TextColor="Black"
-                   FontSize="25"
-                   Margin="15, 25, 15, 25"/>
-            
-            <Label Text="3. Use that color to find its complimentary colors"
-                   TextColor="Black"
-                   FontSize="25"
-                   Margin="15, 25, 15, 25"/>
-            
-             <Image Source="takePhotoButton.png"
-               HorizontalOptions="Center"
-               x:Name="TakePhotoButton"
-               Margin="0, 30, 0, 0">
-                <Image.GestureRecognizers>
-                   <TapGestureRecognizer Tapped="TakePhotoButton_Tapped"/>
-                </Image.GestureRecognizers>
-             </Image>
-            
-            <Image x:Name="pictureFromPage"
-                   HeightRequest="300"
-                   WidthRequest="300"
-                   HorizontalOptions="CenterAndExpand"
-                   VerticalOptions="CenterAndExpand"
-                   Margin="30, 0, 0, 30" />
+        <StackLayout Margin="20" Spacing="15">
 
-        </StackLayout>
+                <Image Source="cameraIcon.png"
+                        x:Name="CameraButton"
+                        HeightRequest="65"
+                        WidthRequest="65"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="CameraButton_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            
+                <Image x:Name="pictureFromPage" HeightRequest="300" WidthRequest="300" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+                <Label x:Name="ColorLabel" Text="Tap the color you want use" HorizontalOptions="Center" IsVisible="False"></Label>
+                
+                <Button x:Name ="ColorOne" BackgroundColor="#00FDE6" TextColor="White" Text="Color One" VerticalOptions="FillAndExpand"  IsVisible="False" Clicked="ColorOne_Clicked"></Button>
+                <Button x:Name="ColorTwo" BackgroundColor="#282A2B" TextColor="White" Text="Color Two" VerticalOptions="FillAndExpand" IsVisible="False" Clicked="ColorTwo_Clicked"></Button>
+                <Button x:Name="ColorThree" BackgroundColor="#FAFDF9" TextColor="Black" Text="Color Three" VerticalOptions="FillAndExpand" IsVisible="False" Clicked="ColorThree_Clicked"></Button>
+                
+
+            </StackLayout>
        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
